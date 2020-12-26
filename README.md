@@ -1,2 +1,2 @@
-# project_topic_6
-First semester Discrete Mathematics project (First year)
+# discrete_math_project
+Computer project on Discrete Mathematics 
