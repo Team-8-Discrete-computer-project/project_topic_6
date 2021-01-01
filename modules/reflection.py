@@ -26,6 +26,7 @@ def reflection_check_func(relation):
 
     return all(t_f)
 
+
 def build_reflection_func(relation):
     """
     Function build reflection relation

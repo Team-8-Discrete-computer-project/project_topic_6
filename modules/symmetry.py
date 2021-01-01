@@ -8,6 +8,9 @@
 """
 
 
+import doctest
+
+
 def symmetry_check_func(relation):
     """
     Function checks if relation is reflection
@@ -52,5 +55,6 @@ def build_symmetry_func(relation):
                     relation[i][j] = 1
                     relation[j][i] = 1
     return relation
-import doctest
+
+
 doctest.testmod()
