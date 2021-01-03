@@ -5,26 +5,6 @@ from itertools import product
 import numpy as np
 
 
-def build_transition_func(relation: list) -> list:
-    '''
-    Return transitive composition of given realtion (as list of lists).
-    >>> build_transition_func ([[1, 0, 0, 1],\
-                                [1, 0, 0, 1],\
-                                [1, 0, 0, 1],\
-                                [1, 0, 0, 1]])
-    [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]]
-    >>> build_transition_func ([[1, 1, 0, 1],\
-                                [1, 0, 0, 1],\
-                                [1, 0, 0, 1],\
-                                [1, 0, 0, 1]])
-    [[1, 1, 0, 1], [1, 1, 0, 1], [1, 1, 0, 1], [1, 1, 0, 1]]
-    '''
-    for k in range(len(relation)):
-        for i in range(len(relation)):
-            if i != k and relation[i][k]:
-                for j in range(len(relation)):
-                    relation[i][j] = relation[i][j] or relation[k][j]
-    return relation
 
 
 def transition_check(relation: list) -> bool:
