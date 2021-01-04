@@ -8,7 +8,7 @@
 """
 
 
-def reflection_check_func(relation):
+def reflection_check_func(relation: list) -> bool:
     """
     Function checks if relation is reflection
     >>> reflection_check_func([[1, 0, 0],\
@@ -27,7 +27,7 @@ def reflection_check_func(relation):
     return all(t_f)
 
 
-def build_reflection_func(relation):
+def build_reflection_func(relation: list) -> list:
     """
     Function build reflection relation
     >>> build_reflection_func([[1, 0, 0],\

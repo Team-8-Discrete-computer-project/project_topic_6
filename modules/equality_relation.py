@@ -21,15 +21,15 @@ def equality_classes(relation: list) -> list:
     for i in range(len(relation)):
         for j in range(len(relation)):
             if relation[i][j]:
-                if not classes_list: #creating first class
-                    if i != j: #we dont need class as [0, 0]
+                if not classes_list:  # creating first class
+                    if i != j:  # we dont need class as [0, 0]
                         new_class = [i, j]
                     else:
                         new_class = [i]
                     classes_list.append(new_class)
-                else: #if we have some classes (at least one)
+                else:  # if we have some classes (at least one)
                     count = 0
-                    for our_class in classes_list: #checking each class
+                    for our_class in classes_list:  # checking each class
                         if i in our_class and j not in our_class:
                             our_class.append(j)
                             break
@@ -39,8 +39,8 @@ def equality_classes(relation: list) -> list:
                         elif i in our_class and j in our_class:
                             break
                         else:
-                            count += 1 
-                            #counter for finding out pair (i,j) which has separate class
+                            count += 1
+                            # counter for finding out pair (i,j) which has separate class
                     if count == len(classes_list):
                         if i != j:
                             new_class = [i, j]

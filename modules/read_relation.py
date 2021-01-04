@@ -5,7 +5,6 @@
         strip_int: [additional fuction] strip and convert str to int
         read_relat: reads relation from the file and return relation in lists in list view
 """
-from typing import List
 
 
 def strip_int(el: str) -> int:
@@ -17,7 +16,7 @@ def strip_int(el: str) -> int:
     return int(el.strip())
 
 
-def read_relat(file_path) -> List[List[int]]:
+def read_relat(file_path) -> list:
     """
     Function reads relation from the file and return relation in lists in list view
     >>> read_relat('relation.csv')

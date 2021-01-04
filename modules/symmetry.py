@@ -8,10 +8,7 @@
 """
 
 
-import doctest
-
-
-def symmetry_check_func(relation):
+def symmetry_check_func(relation: list) -> bool:
     """
     Function checks if relation is symmetrical
     >>> symmetry_check_func([[0, 0, 0],\
@@ -36,7 +33,7 @@ def symmetry_check_func(relation):
     return all(t_f)
 
 
-def build_symmetry_func(relation):
+def build_symmetry_func(relation: list) -> list:
     """
     Function build symmetrical relation
     >>> build_symmetry_func([[1, 1, 1],\
@@ -55,6 +52,3 @@ def build_symmetry_func(relation):
                     relation[i][j] = 1
                     relation[j][i] = 1
     return relation
-
-
-doctest.testmod()

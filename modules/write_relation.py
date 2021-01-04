@@ -5,10 +5,9 @@
         write_relat: get relation in lists in list view and write it into "written_relation.csv"
         in a proper view
 """
-from typing import List
 
 
-def write_relat(relation: List[List[int]]):
+def write_relat(relation: list):
     """
     Function get relation in lists in list view and write it into "written_relation.csv"
     in a proper view
